@@ -1,0 +1,19 @@
+﻿<h1>Data Entry Form - Demo1</h1> <hr />
+
+<form action="/GetPost/Index" method="post">
+    Enter Your Name : <input type="text" id="t1" name="t1" />  <br /> <br />
+    <input type="submit" value="Get Message" />
+</form>
+
+@{
+    if (IsPost == true)
+    {
+        <span>This is post request</span><br />
+        string s1 = Request["t1"];<br />
+        <span>Welcome @s1</span> <br /> <br />
+    }
+    else
+    {
+        <span>This is get request</span>
+    }
+}
